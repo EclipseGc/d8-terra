@@ -4,7 +4,7 @@ hooks:
     build: |
       drush make drupal.make www --prepare-install -y
     enable: |
-      drush {{alias}} site-install -y
+      drush {{alias}} si standard --db-url=mysql://drupal:drupal@database/drupal --site-name='Drupal 8 Development' --account-name=admin --account-pass=password --account-mail=test@test.com -y
       drush {{alias}} uli
     deploy: |
       drush {{alias}} updb -y
