@@ -2,7 +2,7 @@ document_root: "/www"
 
 hooks:
     build: |
-      git clone --branch 8.0.x http://git.drupal.org/project/drupal.git .
+      drush make drupal.make www --prepare-install -y
     enable: |
       drush {{alias}} site-install -y
       drush {{alias}} uli
